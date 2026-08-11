@@ -3,7 +3,7 @@
 **Sito Ufficiale:** [https://virtualolimpix.github.io/]
 
 ## 👑 Team Ufficiale & Crediti
-- 💻 **Creatore del Sito, Admin Ufficiale & Proprietario del Dominio**: Luigi "Luis" (*OldGamerDarthy*)
+- 💻 **Creatore del Sito & Admin Ufficiale**: Luigi "Luis" (*OldGamerDarthy*)
 - 🏆 **Fondatore & Organizzatore Ufficiale dell'Evento**: Davide (*MicioSardo*)
 - 🏛️ **Federazione Ufficiale**: **AVOP** (Association of Virtual Olimpix Players)
 
