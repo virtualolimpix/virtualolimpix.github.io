@@ -1,6 +1,6 @@
 # 🏆 Virtual Olimpix v1.1.0 - The Ultimate Virtual Competition
 
-**Sito Ufficiale:** [https://oldgamerdarthytv.github.io/VirtualOlimpix2026/](https://oldgamerdarthytv.github.io/VirtualOlimpix2026/)
+**Sito Ufficiale:** [https://virtualolimpix.github.io/]
 
 ## 👑 Team Ufficiale & Crediti
 - 💻 **Creatore del Sito, Admin Ufficiale & Proprietario del Dominio**: Luigi "Luis" (*OldGamerDarthy*)
