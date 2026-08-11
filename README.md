@@ -4,7 +4,7 @@
 
 ## 👑 Team Ufficiale & Crediti
 - 💻 **Creatore del Sito, Admin Ufficiale & Proprietario del Dominio**: Luigi "Luis" (*OldGamerDarthy*)
-- 🏆 **Organizzatore Ufficiale dell'Evento**: Davide (*MicioSardo*)
+- 🏆 **Fondatore & Organizzatore Ufficiale dell'Evento**: Davide (*MicioSardo*)
 - 🏛️ **Federazione Ufficiale**: **AVOP** (Association of Virtual Olimpix Players)
 
 ---
