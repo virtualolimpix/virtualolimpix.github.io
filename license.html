@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licenza Open Source GNU GPL v3.0 | Virtual Olimpix v2.0.0</title>
+  <meta name="description" content="Licenza Open Source GNU General Public License v3.0 per Virtual Olimpix 2026 (v2.0.0). Dominio, Sito ed Admin Ufficiale: Luigi 'Luis' (OldGamerDarthy). Organizzatore Ufficiale: Davide (MicioSardo).">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://virtualolimpix.github.io/license.html">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Official Site Theme Song Audio Element -->
+  <audio id="theme-audio" src="Virtual Olimpix 2026.wav" preload="auto"></audio>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" title="Doppio Click per Attivazione Riservata">
+        <img src="images/official_logo_3d.png" alt="Virtual Olimpix Logo 3D Ufficiale" class="v-logo-img-3d">
+        <div class="logo-text-group">
+          <div class="logo-text-title">VIRTUAL OLIMPIX</div>
+          <span class="logo-text-sub">ULTIMATE COMPETITION • v2.0.0</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Medagliere Live</a></li>
+        <li><a href="index.html#news-section" class="nav-link">Notizie Gaming</a></li>
+        <li><a href="minigames.html" class="nav-link">Mini-Giochi (7)</a></li>
+        <li><a href="rules.html" class="nav-link">Regolamento & Info</a></li>
+        <li><a href="license.html" class="nav-link active">Licenza GNU 3.0</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Button (ITA ↔ ENG) -->
+        <button id="lang-toggle-btn" class="lang-toggle-btn" title="Cambia Lingua / Switch Language">
+          🇮🇹 ITA
+        </button>
+        <!-- Theme Song Player Toggle Button -->
+        <button id="theme-song-btn" class="lang-toggle-btn" style="border-color: #ffd700; color: #fff3a8;" title="Riproduci / Sospendi Sigla Ufficiale">
+          🎵 Sigla Ufficiale
+        </button>
+
+        <div class="avop-nav-badge">
+          🌐 <span>AVOP FEDERATION</span>
+        </div>
+        <button id="sound-toggle-btn" class="sound-toggle-btn" title="Attiva/Disattiva Audio Mini-Giochi">🔊</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="poster-hero" style="padding: 3.5rem 0 2.5rem;">
+    <div class="container">
+      <div class="poster-avop-badge">
+        ⚖️ OPEN SOURCE LICENSE // GNU GPL v3.0 • v2.0.0
+      </div>
+      <h1 class="poster-title-gold" style="font-size: 4rem;">LICENZA GNU GPL v3.0</h1>
+      <p class="poster-quote-text">
+        DOCUMENTO E TERMINI DI LICENZA APERTA E SOFTWARE LIBERO
+      </p>
+    </div>
+  </header>
+
+  <!-- License Document Container -->
+  <main class="container section">
+    <div class="game-card" style="background: var(--bg-card); border: 2px solid #ffd700; padding: 2rem;">
+      <h3 class="game-title" style="color: #ffd700; font-size: 1.4rem; margin-bottom: 1rem;">
+        GNU GENERAL PUBLIC LICENSE - Version 3, 29 June 2007
+      </h3>
+      
+      <div style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; max-height: 500px; overflow-y: auto; padding-right: 1rem; font-family: monospace;">
+        <p>Copyright (C) 2026 Virtual Olimpix by Luigi "Luis" (OldGamerDarthy). Organizzato da Davide (MicioSardo).</p>
+        <br>
+        <p>Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.</p>
+        <br>
+        <h4>Preamble</h4>
+        <p>The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users.</p>
+        <br>
+        <h4>TERMS AND CONDITIONS</h4>
+        <p>1. You may copy and distribute verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice.</p>
+        <p>2. You may modify your copy or copies of the Program or any portion of it, thus forming a work based on the Program, and copy and distribute such modifications or work under the terms of Section 1 above.</p>
+        <p>3. Freedom to run, study, share and modify the software for any non-commercial and commercial application.</p>
+      </div>
+
+      <div style="margin-top: 2rem; border-top: 1.5px solid #d4af37; padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <span style="color: var(--text-dim); font-size: 0.85rem;">Virtual Olimpix Repository: github.io/VirtualOlimpix2026</span>
+        <a href="index.html" class="btn-poster-gold">Torna al Medagliere</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Stealth: Autenticazione Riservata -->
+  <div class="modal-backdrop" id="admin-login-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">🔒 Autenticazione Riservata</h3>
+        <button class="close-btn" onclick="window.virtualOlimpixApp.closeModal('admin-login-modal')">&times;</button>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Codice di Verifica</label>
+        <input type="password" id="admin-passcode" class="form-control" placeholder="Inserisci passcode..." onkeydown="if(event.key==='Enter') window.virtualOlimpixApp.verifyAdminPasscode()">
+      </div>
+      <button class="btn-poster-gold" style="width: 100%; justify-content: center;" onclick="window.virtualOlimpixApp.verifyAdminPasscode()">
+        Conferma Autenticazione
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer Banner Ribbon Motto -->
+  <div class="poster-footer-ribbon">
+    <div class="container poster-footer-ribbon-text">
+      ONE WORLD. ONE COMPETITION. ENDLESS LEGENDS.
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">🏆 VIRTUAL OLIMPIX • v2.0.0</div>
+      <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+        Sito creato, amministrato e di proprietà di <strong>Luigi "Luis" (OldGamerDarthy)</strong> • Evento organizzato da <strong>Davide (MicioSardo)</strong>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Medagliere Live</a></li>
+        <li><a href="minigames.html">Mini-Giochi Arcade</a></li>
+        <li><a href="rules.html">Regolamento Ufficiale</a></li>
+        <li><a href="license.html">Licenza GNU 3.0</a></li>
+      </ul>
+      <p>&copy; 2026 Virtual Olimpix by Luigi "Luis" (OldGamerDarthy)<span id="stealth-dot-trigger" class="stealth-admin-trigger" title="Virtual Olimpix System"> • </span>Organizzato da Davide (MicioSardo). Release v2.0.0 under GNU GPL v3.0.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
