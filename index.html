@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Olimpix v1.1.0 | The Ultimate Virtual Competition</title>
+  <meta name="description" content="Portale Ufficiale di Virtual Olimpix 2026 (v1.1.0). AVOP Federation. Creato da Luigi 'Luis' (OldGamerDarthy) ed organizzato da Davide (MicioSardo). Medagliere e-sports live, Notizie Gaming, YouTube Stream Hub e 3 Mini-Giochi Arcade.">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://oldgamerdarthytv.github.io/VirtualOlimpix2026/">
+  <link rel="icon" type="image/jpeg" href="images/official_logo_3d.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Official Site Theme Song Audio Element -->
+  <audio id="theme-audio" src="Virtual Olimpix 2026.wav" preload="auto"></audio>
+
+  <!-- Initial Entrance Splash Screen (Realistic Fireworks & 1:1 3D Shield Emblem) -->
+  <div id="splash-overlay" class="splash-overlay">
+    <canvas id="splash-fireworks-canvas"></canvas>
+
+    <div class="splash-banner-tag">
+      ✨ 🏆 COMPETE • CONNECT • CONQUER 🏆 ✨
+    </div>
+
+    <div class="splash-logo-wrapper">
+      <img src="file:///C:/Users/Luigi/.gemini/antigravity/brain/2bd927c3-0a50-48a0-b276-1117d9a92180/.user_uploaded/media_1785793404322.jpg" alt="Virtual Olimpix Official 3D Shield Emblem" class="splash-logo-img">
+    </div>
+
+    <div class="splash-celebration-sub" data-i18n="splash_sub">
+      🎉 BENVENUTO NELL'ARENA OLIMPICA DEI VIDEOGIOCHI! 🎉
+    </div>
+
+    <div class="splash-progress-container">
+      <div id="splash-progress-bar" class="splash-progress-bar"></div>
+    </div>
+
+    <button id="splash-enter-btn" class="splash-enter-btn" data-i18n="splash_btn">
+      🚀 ENTRA NELL'ARENA OLIMPIX
+    </button>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo" title="Doppio Click per Attivazione Riservata">
+        <img src="images/official_logo_3d.jpg" alt="Virtual Olimpix Logo 3D Ufficiale" class="v-logo-img-3d" onerror="this.src='file:///C:/Users/Luigi/.gemini/antigravity/brain/2bd927c3-0a50-48a0-b276-1117d9a92180/.user_uploaded/media__1785752354232.jpg'">
+        <div class="logo-text-group">
+          <div class="logo-text-title">VIRTUAL OLIMPIX</div>
+          <span class="logo-text-sub">ULTIMATE COMPETITION • v1.1.0</span>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#leaderboard-section" class="nav-link active" data-i18n="nav_leaderboard">Medagliere Live</a></li>
+        <li><a href="#pillars-section" class="nav-link" data-i18n="nav_pillars">Pillars</a></li>
+        <li><a href="#news-section" class="nav-link" data-i18n="nav_news">Notizie Gaming</a></li>
+        <li><a href="minigames.html" class="nav-link" data-i18n="nav_games">Mini-Giochi (3)</a></li>
+        <li><a href="rules.html" class="nav-link" data-i18n="nav_rules">Regolamento & Info</a></li>
+        <li><a href="license.html" data-i18n="nav_license">Licenza GNU 3.0</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Song Player Toggle Button -->
+        <button id="theme-song-btn" class="lang-toggle-btn" style="border-color: #ffd700; color: #fff3a8;" title="Riproduci / Sospendi Sigla Ufficiale">
+          🎵 Sigla Ufficiale
+        </button>
+
+        <!-- Language Switcher Button (ITA ↔ ENG) -->
+        <button id="lang-toggle-btn" class="lang-toggle-btn" title="Cambia Lingua / Switch Language">
+          🇮🇹 ITA
+        </button>
+
+        <div class="avop-nav-badge" title="Association of Virtual Olimpix Players">
+          🌐 <span>AVOP FEDERATION</span>
+        </div>
+        <button id="sound-toggle-btn" class="sound-toggle-btn" title="Attiva/Disattiva Audio Mini-Giochi">🔊</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Poster Artwork Hero Header Section (Featuring Official HD 3D Wallpaper Background) -->
+  <header class="poster-hero">
+    <div class="container">
+      
+      <!-- AVOP Federation Tag Ribbon Header -->
+      <div class="poster-avop-badge">
+        🌐 AVOP • ASSOCIATION OF VIRTUAL OLIMPIX PLAYERS 🌐
+      </div>
+
+      <!-- Giant Central Official 3D Metallic Emblem Wallpaper Image (Seamless 16:9) -->
+      <div class="hero-logo-container">
+        <img src="file:///C:/Users/Luigi/.gemini/antigravity/brain/2bd927c3-0a50-48a0-b276-1117d9a92180/.user_uploaded/media_1785785768281.png" alt="Virtual Olimpix Official 3D Wallpaper Emblem" class="hero-logo-img-3d" onerror="this.src='images/official_logo_3d.jpg'">
+      </div>
+
+      <!-- Official Motto Tagline Quote -->
+      <div class="poster-quote-text" data-i18n="hero_quote">
+        "COMPETE. UNITE. BECOME LEGEND."
+      </div>
+
+      <!-- 5 Circular Metallic Icon Coins (Controller, Keyboard, Trophy, Headset, Globe) -->
+      <div class="poster-icons-bar">
+        <div class="poster-icon-coin" title="Console Gaming">🎮</div>
+        <div class="poster-icon-coin" title="PC Masters">⌨️</div>
+        <div class="poster-icon-coin" title="Trophy & Medals">🏆</div>
+        <div class="poster-icon-coin" title="E-Sports Audio">🎧</div>
+        <div class="poster-icon-coin" title="Global Worldwide">🌐</div>
+      </div>
+
+      <!-- Metallic Action Buttons -->
+      <div class="poster-actions-row">
+        <a href="#leaderboard-section" class="btn-poster-gold" data-i18n="btn_leaderboard">📊 Medagliere Live</a>
+        <a href="minigames.html" class="btn-poster-blue" data-i18n="btn_games">🎮 Gioca ai Mini-Giochi (3 Arcade)</a>
+        <a href="#video-hub-section" class="btn-poster-steel" data-i18n="btn_videos">🎬 Video Stream Hub</a>
+      </div>
+
+      <!-- Realtime Counters Bar -->
+      <div class="stats-bar">
+        <div class="stat-card">
+          <div class="stat-number" id="stat-players">0</div>
+          <div class="stat-label" data-i18n="stat_players">Atleti Iscritti</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-points">0</div>
+          <div class="stat-label" data-i18n="stat_points">Punti Totali Olimpix</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-wins">0</div>
+          <div class="stat-label" data-i18n="stat_wins">Medaglie Assegnate</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-cats">0</div>
+          <div class="stat-label" data-i18n="stat_cats">Discipline Ufficiali</div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3 Pillars Showcase Section (1. LEGACY, 2. FUTURE, 3. ELITE) -->
+  <section class="container poster-pillars-section" id="pillars-section">
+    <div class="poster-pillars-title">
+      — THREE CONCEPTS. ONE VISION. —
+    </div>
+
+    <div class="poster-pillars-grid">
+      
+      <!-- Pillar 1: LEGACY (Golden Laurel Wreath & Victory Trophy) -->
+      <div class="poster-pillar-card">
+        <div class="poster-pillar-header-tag">1. CONCEPT</div>
+        
+        <div class="poster-laurel-emblem-box">
+          <svg class="poster-laurel-svg" viewBox="0 0 100 100" fill="none">
+            <path d="M 30 75 Q 15 50 30 25 Q 40 45 30 75 Z" fill="url(#goldGrad)"/>
+            <path d="M 70 75 Q 85 50 70 25 Q 60 45 70 75 Z" fill="url(#goldGrad)"/>
+            <circle cx="50" cy="50" r="28" fill="radial-gradient(circle, #2a3d66, #030612)" stroke="url(#goldGrad)" stroke-width="2"/>
+            <text x="50" y="58" font-size="24" text-anchor="middle">🏆</text>
+          </svg>
+        </div>
+
+        <h3 class="poster-pillar-title">LEGACY</h3>
+        <div class="poster-pillar-subtitle">TRADITION. HONOR. VICTORY.</div>
+        
+        <div class="poster-pillar-badges-row">
+          <span class="poster-micro-tag">🏛️ LEGACY</span>
+          <span class="poster-micro-tag">🏆 VICTORY</span>
+          <span class="poster-micro-tag">🤝 UNITY</span>
+          <span class="poster-micro-tag">🌐 WORLDWIDE</span>
+        </div>
+      </div>
+
+      <!-- Pillar 2: FUTURE (Electric Blue Cyber V Symbol) -->
+      <div class="poster-pillar-card future-card">
+        <div class="poster-pillar-header-tag">2. CONCEPT</div>
+        
+        <div class="poster-laurel-emblem-box">
+          <svg class="poster-laurel-svg blue-laurel" viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="38" stroke="#00d2ff" stroke-width="2" stroke-dasharray="6 4"/>
+            <circle cx="50" cy="50" r="28" fill="radial-gradient(circle, #0055ff, #02050e)" stroke="#00d2ff" stroke-width="2"/>
+            <text x="50" y="58" font-size="24" text-anchor="middle">⚡</text>
+          </svg>
+        </div>
+
+        <h3 class="poster-pillar-title" style="color: #80e5ff;">FUTURE</h3>
+        <div class="poster-pillar-subtitle">TECHNOLOGY. CONNECTION. COMPETITION. EVOLUTION.</div>
+        
+        <div class="poster-pillar-badges-row">
+          <span class="poster-micro-tag">💻 TECH</span>
+          <span class="poster-micro-tag">🔗 CONNECT</span>
+          <span class="poster-micro-tag">🎯 COMPETE</span>
+          <span class="poster-micro-tag">⏩ EVOLUTION</span>
+        </div>
+      </div>
+
+      <!-- Pillar 3: ELITE (Geometric Gold V & Crown) -->
+      <div class="poster-pillar-card">
+        <div class="poster-pillar-header-tag">3. CONCEPT</div>
+        
+        <div class="poster-laurel-emblem-box">
+          <svg class="poster-laurel-svg" viewBox="0 0 100 100" fill="none">
+            <path d="M 25 70 L 15 35 L 35 50 L 50 20 L 65 50 L 85 35 L 75 70 Z" fill="url(#goldGrad)" stroke="#ffffff" stroke-width="1"/>
+            <text x="50" y="62" font-size="22" text-anchor="middle">👑</text>
+          </svg>
+        </div>
+
+        <h3 class="poster-pillar-title">ELITE</h3>
+        <div class="poster-pillar-subtitle">SIMPLICITY. STRENGTH. ICONIC.</div>
+        
+        <div class="poster-pillar-badges-row">
+          <span class="poster-micro-tag">🎯 FOCUS</span>
+          <span class="poster-micro-tag">⭐ EXCELLENCE</span>
+          <span class="poster-micro-tag">🏔️ AMBITION</span>
+          <span class="poster-micro-tag">👑 LEGENDARY</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Live Auto-Scrolling Gaming News Feed Section (Auto RSS Harvester) -->
+  <section class="container news-section" id="news-section">
+    <div class="news-card-wrapper">
+      <div class="news-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div class="news-title-badge">
+          📰 <span data-i18n="news_title">Notizie Gaming Online in Tempo Reale (RSS Harvester)</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <button id="news-btn-ita" class="filter-btn active" title="Mostra notizie dai principali portali italiani">
+            🇮🇹 Notizie Italia
+          </button>
+          <button id="news-btn-intl" class="filter-btn" title="Mostra notizie dai portali internazionali">
+            🌐 Internazionali
+          </button>
+          <button id="refresh-news-btn" class="btn-poster-steel" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;" title="Recupera subito le notizie online più recenti">
+            🔄 Aggiorna Ora
+          </button>
+        </div>
+      </div>
+      <div style="margin-bottom: 0.85rem;">
+        <span id="news-region-badge" style="color: #00d2ff; font-size: 0.85rem; font-family: var(--font-subheading); font-weight: 800;">
+          ● Feed RSS Italia (Multiplayer, Everyeye, Eurogamer IT)
+        </span>
+      </div>
+
+      <div class="news-ticker-container">
+        <div class="news-ticker-track" id="news-ticker-track">
+          <!-- Popolato dinamicamente da app.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive YouTube Gaming Video Stream Hub Section -->
+  <section class="container video-hub-section" id="video-hub-section">
+    <div class="video-hub-card">
+      <div class="video-hub-header">
+        <div class="news-title-badge">
+          🎬 <span data-i18n="video_title">YouTube Gaming & E-Sports Video Stream Hub</span>
+        </div>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="filter-btn active" onclick="window.youtubeHarvester.filterCategory('all')">Tutti i Video</button>
+          <button class="filter-btn" onclick="window.youtubeHarvester.filterCategory('esports')">E-Sports</button>
+          <button class="filter-btn" onclick="window.youtubeHarvester.filterCategory('highlight')">Highlight</button>
+          <button class="filter-btn" onclick="window.youtubeHarvester.filterCategory('retro')">Retro Arcade</button>
+          <button id="refresh-videos-btn" class="btn-poster-steel" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;" title="Mescola Playlist Live">
+            🔄 Aggiorna Video Live
+          </button>
+        </div>
+      </div>
+
+      <div class="video-hub-layout">
+        <!-- Main Video Player Window -->
+        <div class="main-video-container">
+          <div class="main-video-player-wrapper">
+            <iframe id="main-youtube-iframe" title="YouTube Gaming Video Stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="main-video-info">
+            <h3 class="main-video-title" id="main-video-title">Caricamento Video Live...</h3>
+            <div class="main-video-meta" id="main-video-meta">
+              <span>Canale: Virtual Olimpix</span> • <span>E-Sports Streaming</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Muted Preview Playlist Sidebar -->
+        <div class="video-playlist-sidebar" id="video-playlist-sidebar">
+          <!-- Popolato dinamicamente da app.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arena Equalizer & 8-Bit Chiptune Songs Section -->
+  <section class="container media-section">
+    <div class="media-grid">
+      
+      <!-- Interactive 60FPS Arena Equalizer Visualizer -->
+      <div class="media-card">
+        <h3 class="media-card-title" data-i18n="eq_title">📡 Visualizzatore Spettatori Arena (60FPS)</h3>
+        <div class="iframe-container">
+          <canvas id="arena-telemetry-canvas"></canvas>
+        </div>
+      </div>
+
+      <!-- 100% Original 8-Bit Chiptune Songs Synthesizer -->
+      <div class="media-card">
+        <h3 class="media-card-title" data-i18n="synth_title">🕹️ Canzoncine 8-Bit Olimpix (Fatte da Noi)</h3>
+        <div style="background: rgba(3, 6, 14, 0.85); border: 1.5px solid #d4af37; padding: 0.85rem; border-radius: var(--radius-sm); margin-bottom: 1.25rem; text-align: center;">
+          <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; font-weight: 800;">Canzoncina 8-Bit In Riproduzione</div>
+          <div id="synth-track-title" style="font-family: var(--font-heading); color: #ffd700; font-weight: 900; font-size: 1.05rem; margin-top: 0.2rem;">
+            👾 Canzone 1: Virtual Olimpix Anthem 8-Bit
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.85rem;">
+          <button id="synth-prev-btn" class="btn-poster-steel" style="padding: 0.5rem 0.85rem;" title="Canzone Precedente">⏮️ Prec</button>
+          <button id="synth-next-btn" class="btn-poster-steel" style="padding: 0.5rem 0.85rem;" title="Prossima Canzone">⏭️ Succ</button>
+        </div>
+
+        <button id="play-synth-btn" class="btn-poster-gold" style="width: 100%; justify-content: center;">
+          ▶️ Riproduci Canzoncina 8-Bit Originale
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Leaderboard Section -->
+  <main class="container section" id="leaderboard-section">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Classifica Ufficiale <span>Virtual Olimpix</span></h2>
+        <p style="color: var(--text-muted);">Medagliere delle Olimpiadi dei Videogiochi aggiornato in tempo reale.</p>
+      </div>
+    </div>
+
+    <!-- Toolbar Amministratore (Visibile solo dopo autenticazione stealth) -->
+    <div class="admin-bar" id="admin-toolbar" style="display: none;">
+      <div class="admin-title">
+        ⚙️ Pannello Gestione Riservato Active (Luis)
+      </div>
+      <div class="admin-actions">
+        <button class="btn-poster-gold" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;" onclick="window.virtualOlimpixApp.openModal('add-player-modal')">
+          ➕ Aggiungi Atleta
+        </button>
+        <button class="btn-poster-steel" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;" onclick="window.virtualOlimpixApp.openModal('add-category-modal')">
+          ➕ Nuova Disciplina
+        </button>
+        <button class="btn-poster-steel" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;" onclick="window.virtualOlimpixApp.exportDatabase()">
+          💾 Backup JSON
+        </button>
+        <label class="btn-poster-steel" style="padding: 0.45rem 0.9rem; font-size: 0.85rem; cursor: pointer;">
+          📥 Ripristina JSON <input type="file" accept=".json" style="display: none;" onchange="window.virtualOlimpixApp.importDatabase(event)">
+        </label>
+        <button class="btn-poster-steel" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;" onclick="window.virtualOlimpixApp.handleAdminToggle()">
+          🚪 Disattiva
+        </button>
+      </div>
+    </div>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Cerca atleta o tag nazione...">
+      </div>
+      <div class="category-filters" id="category-filters">
+        <!-- Popolato dinamicamente da app.js -->
+      </div>
+    </div>
+
+    <!-- Leaderboard Table -->
+    <div class="table-wrapper">
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Atleta / Gamer</th>
+            <th>Disciplina</th>
+            <th>Punteggio</th>
+            <th>Vittorie / Medaglie</th>
+            <th>Stato</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-tbody">
+          <!-- Popolato dinamicamente da app.js -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Modal Stealth: Autenticazione Riservata -->
+  <div class="modal-backdrop" id="admin-login-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">🔒 Autenticazione Riservata</h3>
+        <button class="close-btn" onclick="window.virtualOlimpixApp.closeModal('admin-login-modal')">&times;</button>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Codice di Verifica</label>
+        <input type="password" id="admin-passcode" class="form-control" placeholder="Inserisci passcode..." onkeydown="if(event.key==='Enter') window.virtualOlimpixApp.verifyAdminPasscode()">
+      </div>
+      <button class="btn-poster-gold" style="width: 100%; justify-content: center;" onclick="window.virtualOlimpixApp.verifyAdminPasscode()">
+        Conferma Autenticazione
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Admin: Aggiungi Atleta -->
+  <div class="modal-backdrop" id="add-player-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">➕ Registra Nuovo Atleta Olimpix</h3>
+        <button class="close-btn" onclick="window.virtualOlimpixApp.closeModal('add-player-modal')">&times;</button>
+      </div>
+      <form id="add-player-form">
+        <div class="form-group">
+          <label class="form-label">Nome / Nickname Atleta</label>
+          <input type="text" id="player-name" class="form-control" required placeholder="Es. ViperX">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tag Nazione / Clan (3 Lettere)</label>
+          <input type="text" id="player-tag" class="form-control" maxlength="3" required placeholder="Es. ITA">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Disciplina Ufficiale</label>
+          <select id="player-category" class="form-control"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Punteggio Iniziale</label>
+          <input type="number" id="player-score" class="form-control" value="1000" min="0">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Numero Medaglie / Vittorie</label>
+          <input type="number" id="player-wins" class="form-control" value="0" min="0">
+        </div>
+        <button type="submit" class="btn-poster-gold" style="width: 100%; justify-content: center;">Iscrivi Atleta</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Admin: Modifica Atleta -->
+  <div class="modal-backdrop" id="edit-player-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">✏️ Modifica Punteggio Atleta</h3>
+        <button class="close-btn" onclick="window.virtualOlimpixApp.closeModal('edit-player-modal')">&times;</button>
+      </div>
+      <form id="edit-player-form">
+        <input type="hidden" id="edit-player-id">
+        <div class="form-group">
+          <label class="form-label">Nome Atleta</label>
+          <input type="text" id="edit-player-name" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tag Nazione</label>
+          <input type="text" id="edit-player-tag" class="form-control" maxlength="3" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Disciplina</label>
+          <select id="edit-player-category" class="form-control"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Punteggio Olimpix</label>
+          <input type="number" id="edit-player-score" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Medaglie / Vittorie</label>
+          <input type="number" id="edit-player-wins" class="form-control" required>
+        </div>
+        <button type="submit" class="btn-poster-gold" style="width: 100%; justify-content: center;">Aggiorna Dati</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Admin: Aggiungi Disciplina -->
+  <div class="modal-backdrop" id="add-category-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">➕ Crea Nuova Disciplina Olimpix</h3>
+        <button class="close-btn" onclick="window.virtualOlimpixApp.closeModal('add-category-modal')">&times;</button>
+      </div>
+      <form id="add-category-form">
+        <div class="form-group">
+          <label class="form-label">Nome Disciplina</label>
+          <input type="text" id="cat-name" class="form-control" required placeholder="Es. Rocket Speed">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Icona Emoji</label>
+          <input type="text" id="cat-icon" class="form-control" value="⚡">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Descrizione Breve</label>
+          <input type="text" id="cat-desc" class="form-control" placeholder="Es. Torneo di corsa supersonica">
+        </div>
+        <button type="submit" class="btn-poster-gold" style="width: 100%; justify-content: center;">Salva Disciplina</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Banner Ribbon Motto -->
+  <div class="poster-footer-ribbon">
+    <div class="container poster-footer-ribbon-text" data-i18n="footer_motto">
+      ONE WORLD. ONE COMPETITION. ENDLESS LEGENDS.
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="images/official_logo_3d.jpg" alt="Logo 3D" class="footer-logo-img" onerror="this.src='file:///C:/Users/Luigi/.gemini/antigravity/brain/2bd927c3-0a50-48a0-b276-1117d9a92180/.user_uploaded/media__1785752354232.jpg'">
+        <span>VIRTUAL OLIMPIX • v1.1.0</span>
+      </div>
+      <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+        Sito creato, amministrato e di proprietà di <strong>Luigi "Luis" (OldGamerDarthy)</strong> • Evento organizzato da <strong>Davide (MicioSardo)</strong>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#leaderboard-section" data-i18n="nav_leaderboard">Medagliere Live</a></li>
+        <li><a href="minigames.html" data-i18n="nav_games">Mini-Giochi Arcade</a></li>
+        <li><a href="rules.html" data-i18n="nav_rules">Regolamento Ufficiale</a></li>
+        <li><a href="license.html" data-i18n="nav_license">Licenza GNU 3.0</a></li>
+      </ul>
+      <p>&copy; 2026 Virtual Olimpix by Luigi "Luis" (OldGamerDarthy)<span id="stealth-dot-trigger" class="stealth-admin-trigger" title="Virtual Olimpix System"> • </span>Organizzato da Davide (MicioSardo). Release v1.1.0 under GNU GPL v3.0.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
