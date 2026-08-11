@@ -46,4 +46,4 @@ Mantenuti **esclusivamente i 3 giochi principali** richiesti:
 
 ## ⚖️ Licenza
 Rilasciato sotto licenza **GNU General Public License v3.0 (GNU GPL-3.0)**.
-Copyright (C) 2026 Virtual Olimpix by Luigi "Luis" (OldGamerDarthy). Organizzato da Davide (MicioSardo).
+Copyright (C) 2026 Virtual Olimpix by Davide (Miciosardo). Sito creato da Luigi Sestili Spurio.
